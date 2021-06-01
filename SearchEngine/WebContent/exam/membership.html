@@ -104,15 +104,25 @@ $(document).ready(function(){
 			$("#addrValid").html("").removeClass("warning");
 		}
 		
-		if($("#phone_num").val()==""){
+		if($("#phone_num1").val()==""){
 			 
-			if($("#phoneValid").text()==""){
-				$("#phoneValid").html("번호를 입력하세요").addClass("warning");
+			if($("#phone1Valid").text()==""){
+				$("#phone1Valid").html("번호를 입력하세요").addClass("warning");
 			}
 			return false;
 			
 		}else{
-			$("#phoneValid").html("").removeClass("warning");
+			$("#phone1Valid").html("").removeClass("warning");
+		}
+		if($("#phone_num2").val()==""){
+			 
+			if($("#phone2Valid").text()==""){
+				$("#phone2Valid").html("번호를 입력하세요").addClass("warning");
+			}
+			return false;
+			
+		}else{
+			$("#phone2Valid").html("").removeClass("warning");
 		}
 		
 		
@@ -164,8 +174,8 @@ $(document).ready(function(){
 				
 				<table class="table">
 					<tr>
-    					<th>아이디</th>
-    					<td ><input type="text" id="userId" name="userId" /></td>
+    					<th width="100">아이디</th>
+    					<td width="100"><input type="text" id="userId" name="userId" /></td>
 						<td ><span id="idValid"></span></td>
 					</tr>
 

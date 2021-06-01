@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://kit.fontawesome.com/97e0c75126.js" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF" crossorigin="anonymous"></script>
+	
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+		.youtube_ul {
+			list-style: none;
+   			padding: 0px;
+   			margin: 0px;
+   			text-align: center;
+		}
+		#youtube ul li iframe {
+			width: 320px;
+			height:200px;
+			margin:2px;
+			border: 2px solid #cccccc;
+		}
+		li {
+			float : left;
+		}
+	</style>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		/* 유튜브! */
+		// li 에 마우스 올라오면 영화정보를 
+		// 보여주게 설정
+		$("#youtube ul li").hover(function(){
+			$(".movieinfo").show();
+	        // 마우스 오버된 img의 src속성값얻기
+			//var src = $(this).find("img").attr("src");
+	        //        this의 자식요소(img)알아낸다. 
+	        var src = $("iframe",this).attr("src");
+			console.log(src);
+			$("#mov1").attr("src",src);
+		},function(){
+			$(".movieinfo").hide();
+		}
+		);
+	})
+	</script>
+	
+
+</head>
+	
+
+<body>
+
+	<!-- 영상 test25 --> 
+	<div id="youtube">
+		<ul class="youtube_ul">
+			<li>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/moFB-j5iY2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<span>전 세계가 실망한 바로 그 장면</span>
+			</li>
+			<li>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/AwrFPJk_BGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<span>이얏호응</span>
+			</li>
+			<li>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/wDfqXR_5yyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<span>아이유최고</span>
+			</li>
+			<li>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/CBVV-i_mZVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<span>더우니까 눈밭 고양이</span>
+			</li>
+		</ul>
+	</div>
+	<div style="clear:both; position:relative; border:1px solid #757070;">
+		<div class="movieinfo">
+			<p id="p1"></p>
+			<iframe id="mov1" width="560" height="315" />
+		</div>
+	</div>
+
+</body>
+</html>

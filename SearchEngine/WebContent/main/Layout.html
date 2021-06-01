@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	
+	<meta charset="UTF-8">
+	<title>Layout</title>
+	
+	<style type="text/css">
+		body {
+			font-family: 'Jua', sans-serif;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#weather").load("./weather.html");
+		})
+		$(document).ready(function() {
+			$("#recMovie").load("./recMovie.html");
+		})
+		$(document).ready(function() {
+			$("#googleSearch").load("./GoogleSearch.html");
+		})
+		
+		$(document).ready(function() {
+			$("#login").load("../exam/login_button.html");
+		})
+		
+		$(document).ready(function() {
+			$("#recBook").load("../RText/bookpage.html");
+		})
+		
+	</script>
+</head>
+
+
+<body>
+
+	<table width="100%" style="text-align:center; border:none;">
+		
+		<!-- Header -->
+	  <tr>
+	    <td colspan="2" height=150px; style="background-color:#ddd;margin:4px;padding:4px;">
+	    	<div  id="googleSearch"></div>
+	    </td>
+	  </tr>
+	  
+  		<!-- Navigator -->
+	  <tr>
+	    <td height=50px; style="background-color:#ddd;margin:4px;padding:4px;">
+	    	Nav1 //메뉴
+	    </td>
+	    <td	height=50px; style="background-color:#ddd;margin:4px;padding:4px;">
+	    	<div  id="weather"></div>
+	    </td>
+	  </tr>
+	  
+	  
+  		<!-- 1st row -->
+	  <tr>
+	    <td style="background-color:#ddd;width:280px;">
+	      Section1 //광고 박민지
+	      <p style="background-color:#efefef;width:265px;margin:10px;">
+	      	Article//뉴스광고 김지운씨
+	      </p>
+	    </td>
+	    <td style="background-color:#ddd;height:60px;">
+	    	<div  id="login"></div>
+	    </td>
+	  </tr>
+	  
+	  	<!-- 2nd row -->
+  	  <tr>
+	    <td style="background-color:#ddd;width:280px;">
+			Section2 //뉴스 김지운씨
+	    </td>
+	     
+	    <td style="background-color:#ddd;height:60px;">
+	    	Aside2//쇼핑 이지연
+	    </td>
+	  </tr>
+	  
+	  	<!-- 3rd row -->
+   	  <tr>
+	    <td style="background-color:#ddd;width:280px;">
+	    	<div  id="recBook"></div>
+	    </td>
+	     
+	    <td style="background-color:#ddd;height:60px;">
+			<!-- //추천 영상 박민지 -->
+			<div  id="recMovie"></div>
+		</td>
+	  </tr>
+	  
+		<!-- Footer -->	
+	  <tr>
+	    <td colspan="2" style="background-color:#ddd">
+	    	Footer
+	    </td>
+	  </tr>
+	  
+	</table>
+
+</body>
+</html>

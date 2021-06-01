@@ -1,0 +1,245 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+	<script src="https://kit.fontawesome.com/97e0c75126.js" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF" crossorigin="anonymous"></script>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+	<meta charset="UTF-8">
+	<title>Search Engine</title>
+	
+	
+	<style type="text/css">
+		
+		body {
+		  font-family: 'Jua', sans-serif;
+		  padding-top: 40px;
+		  margin: 100px;
+		  width: 100%;
+		  background-color: #FAF8F8;
+		  color: #4B4848;
+		  /* display: flex; */
+		  justify-content: center;
+		  align-items: center;
+		}
+  
+  		#search-form {
+  			display: inline-block;
+  			margin-bottom: 40px;
+  			text-align: center;
+  		}
+  		.weather-form {
+  			color: #666633;
+  		}
+  		.date-form {
+  			font-size: 20px;
+  		}
+  		
+		.field-container {
+		  position: relative;
+		  margin: 0;
+		  border: 0;
+		  width: center;
+		  height: 40px;
+		}
+		
+		.field::placeholder {
+			font-family: 'Jua', sans-serif;
+			color : #666633;
+			size: 18px;
+		}
+		
+		.icons-container {
+		  position: absolute;
+		  top: 25px;
+		  right: -5px;
+		  width: 35px;
+		  height: 35px;
+		  overflow: hidden;
+		}
+		
+		.icon-search {
+		  position: relative;
+		  width: 50%;
+		  height: 50%;
+		  opacity: 1;
+		  border-radius: 50%;
+		  border: 3px solid #757070;
+		}
+		
+		.field {
+		  border: 0;
+		  width: 100%;
+		  height: 100%;
+		  padding: 10px 20px;
+		  background: white;
+		  border-radius: 3px;
+		  box-shadow: 0px 8px 15px rgba(#4B4848, 0.1);
+		  transition: all 0.4s ease;
+		}
+		
+		.youtube_ul {
+			list-style: none;
+   			padding: 0px;
+   			margin: 0px;
+   			text-align: center;
+		}
+		#youtube ul li iframe {
+			width: 320px;
+			height:200px;
+			margin:2px;
+			border: 2px solid #cccccc;
+		}
+		li {
+			float : left;
+		}
+		
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			let weatherIcon = {
+					'01' : 'fas fa-sun',
+					'02' : 'fas fa-cloud-sun', 
+					'03' : 'fas fa-cloud', 
+					'04' : 'fas fa-cloud-meatball', 
+					'09' : 'fas fa-cloud-sun-rain', 
+					'10' : 'fas fa-cloud-showers-heavy', 
+					'11' : 'fas fa-poo-storm', 
+					'13' : 'far fa-snowflake', 
+					'50' : 'fas fa-smog'
+			};
+	
+			$.ajax({
+				url: 'http://api.openweathermap.org/data/2.5/weather?q=' + 'Seoul'
+					+ '&appid=' + '2ee3665374e4d7607308804ed94e7e4a' + '&units=metric',
+				dataType: 'json',
+				type: 'GET',
+				success: function(data) {
+					var $Icon = (data.weather[0].icon).substr(0,2);
+					var $Temp = Math.floor(data.main.temp) + 'º';
+					var $city = data.name;
+					
+					$('.CurrIcon').append('<i class="' + weatherIcon[$Icon] +'"></i>');
+					$('.CurrTemp').prepend($Temp);
+					$('.City').append($city); 
+					
+					console.log(data);
+				}
+			})
+			
+			/* 유튜브! */
+			// li 에 마우스 올라오면 영화정보를 
+			// 보여주게 설정
+			$("#youtube ul li").hover(function(){
+				$(".movieinfo").show();
+		        // 마우스 오버된 img의 src속성값얻기
+				//var src = $(this).find("img").attr("src");
+		        //        this의 자식요소(img)알아낸다. 
+		        var src = $("iframe",this).attr("src");
+				console.log(src);
+				$("#mov1").attr("src",src);
+			},function(){
+				$(".movieinfo").hide();
+			}
+			);
+		}); 
+	
+	</script>
+	
+	<script type="text/javascript">
+	
+	  	function time(){
+		    const today = moment();
+			var clock = document.getElementById("clock");
+
+		    var nowTime = moment(today).format("dddd, Do MM YYYY");
+			
+			clock.innerHTML = nowTime;
+	  	}
+		window.onload = function() {
+			time();
+		}
+		
+	</script>
+
+</head>
+
+
+<body>
+	<!-- 구글검색 -->
+	<div id = "search-form">
+		<form method=get action="http://www.google.co.kr/search" target="_blank" >
+			<fieldset class="field-container">
+				<input type="text" placeholder="검색어 입력~~" name="q" class="field" value="" />
+					<div class="icons-container">
+						<input class="icon-search" type=submit value=" " name=btnG/>
+						<!-- <div class="icon-search"></div> -->
+					</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<!-- 날씨 -->
+	<div class = "weather-form">
+		<div class="CurrIcon"></div>
+		<div class="CurrTemp"></div>
+		<div class="City"></div>
+	</div>
+	
+	<!--  select로 먼가 만들... -->
+	<!-- <input id="search" placeholder="search" list="city"></input>
+		<datalist id="city">
+			<option value="seoul"></option>
+			<option value="loc1"></option>
+			<option value="loc2"></option>
+			<option value="loc3"></option>
+			<option value="loc4"></option>
+		</datalist>  -->
+	
+	<!-- 오늘날짜(현재시간도 구현가능) -->
+	<div class = "date-form">
+		<h3> TODAY | <span id="clock"></span></h3>
+	</div>
+	
+	<!-- 영상 test25 --> 
+	<div id="youtube">
+		<ul class="youtube_ul">
+			<li >
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/moFB-j5iY2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<span>전 세계가 실망한 바로 그 장면</span>
+			</li>
+			<li>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/AwrFPJk_BGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<span>이얏호응</span>
+			</li>
+			<li>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/wDfqXR_5yyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<span>아이유최고</span>
+			</li>
+			<li>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/CBVV-i_mZVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+				<span>더우니까 눈밭 고양이</span>
+			</li>
+		</ul>
+	</div>
+	<div style="clear:both; position:relative; border:1px solid #757070;">
+		<div class="movieinfo">
+			<p id="p1"></p>
+			<iframe id="mov1" width="560" height="315"/>
+		</div>
+	</div>
+	
+	<!-- 광고 -->
+	
+	
+</body>
+</html>

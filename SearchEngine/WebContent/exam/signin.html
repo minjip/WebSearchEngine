@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+
+	<style type="text/css">
+		#box{
+			width: 400px;
+			margin: auto;
+			margin-top: 100px;
+		}
+	.item {
+			float:left;
+			/* display: inline-block; */
+			width:100px; /* inline 요소라도 float상태면 크기조정 된다 */
+		}
+	.warning {
+		color:red;
+		font-weight: bold;
+	}
+	</style>
+	
+	<!-- bootstrap 설정 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <script>
+$(document).ready(function(){
+	
+	$("#regBtn").click(function(){
+		// 유(무)효성 검사 
+		if(invalidation()==true){
+		   // 입력값 초기화
+		   clearInputValue();
+		}
+	});
+	
+	
+	function clearInputValue(){
+		$("#userId[type='text']").val("");
+		$("#pwd:password").val("");
+		$("#idValid").html("");
+		$("#nameValid").html("");
+		
+	}
+	function invalidation(){
+		// 아이디를 입력하지 않으면 
+		// 해당 span에 아이디를 입력하세요 
+		//라믄 문구 추가 
+		if($("#userId:text").val()==""){
+			// id를 빼고 실행하면 
+			if($("#idValid").text()==""){//경고메시지가 비어있으면
+				$("#idValid").html("아이디를 입력하세요").addClass("warning");
+			//.append("아이디를 입력하세요")
+			//.addClass("warning");
+			}
+			return false;
+			
+		}else{
+			//입력되어있으면 경고메시지 지워라
+			$("#idValid").html("").removeClass("warning");
+		}
+		//비밀번호
+		if($("#pwd").val()==""){
+			if($("#pwdValid").text()==""){
+				$("#pwdValid").html("비밀번호를 입력하세요").addClass("warning");
+			
+			}
+			return;
+		}else{
+			$("#pwdValid").html("").removeClass("warning");
+		}
+		
+		alert("로그인 되었습니다.");
+		document.location.href="../main/Layout.html";
+		return true;
+	}
+}
+
+);
+</script>
+</head>
+<body>
+
+	<div id="box">
+	<form>
+		<div class="panel panel-info">
+    		<div class="panel-heading"><h3>로그인</h3></div>
+    		<div class="panel-body">
+    			
+    			<table class="table table-striped">
+    				<tr>
+    					<th>아이디</th>
+    					<td><input id="userId" name="userId" /></td>
+						<td><span id="idValid"></span></td>
+    				</tr>
+    				<tr>
+    					<th>비밀번호</th>
+    					<td><input type="password" id="pwd" /></td>
+						<td><span id="pwdValid"></span></td>
+    				</tr>
+    				
+    			</table>
+				<table class="table table-striped">
+    				<tr>
+    					<td colspan="2" align="center">
+    						<a href="#"><input class="btn btn-primary" id="regBtn" type="button" value="로그인"></a>
+    						<a href="../exam/membership.html"><input class="btn btn-success" type="button" value="회원가입"></a>
+    					</td>
+    				</tr>
+				</table>
+    		</div>
+    	</div>
+    </form>
+	</div>
+	
+</body>
+</html>

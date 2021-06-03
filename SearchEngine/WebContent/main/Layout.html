@@ -10,25 +10,58 @@
 	<title>Layout</title>
 	
 	<style type="text/css">
-		body {
+		* {
 			font-family: 'Jua', sans-serif;
 		}
-		
+		#googleSearch {
+			background-color: #ddd; 
+			display: block;
+			
+			height: 200px;
+			margin: 100 auto;
+  			padding: 0px;
+		}
+		#newsAds {
+			display:inline-block;
+			
+			width: 70%;
+			padding: 0px;
+			margin: 0 auto;
+		}
+		#login {
+			display:inline-block;
+			
+			width:30px;
+			padding: 0px;
+			margin: 0 auto;
+		}
 	</style>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#weather").load("./weather.html");
-		})
-		$(document).ready(function() {
-			$("#recMovie").load("./recMovie.html");
-		})
-		$(document).ready(function() {
 			$("#googleSearch").load("./GoogleSearch.html");
+		})
+	
+		$(document).ready(function() {
+			$("#navigator").load("./navi.html");
+		})
+		$(document).ready(function() {
+			$("#weather").load("./weather.html");
 		})
 		
 		$(document).ready(function() {
+			$("#recMovie").load("./recMovie.html");
+		})
+
+		$(document).ready(function() {
+			$("#newsAds").load("../news/NewsAds.html");
+		})
+		$(document).ready(function() {
 			$("#login").load("../exam/login_button.html");
+		})
+		
+		$(document).ready(function() {
+			$("#newsPanel").load("../news/NewsFile.html");
 		})
 		
 		$(document).ready(function() {
@@ -41,21 +74,21 @@
 
 <body>
 
-	<table width="100%" style="text-align:center; border:none;">
+	<table width="80%" style="text-align:center; border:none; margin: 0 auto; padding: 0px;">
 		
 		<!-- Header -->
 	  <tr>
-	    <td colspan="2" height=150px; style="background-color:#ddd;margin:4px;padding:4px;">
+	    <td colspan="2" style="margin: 0px; padding:0px;">
 	    	<div  id="googleSearch"></div>
 	    </td>
 	  </tr>
 	  
   		<!-- Navigator -->
-	  <tr>
-	    <td height=50px; style="background-color:#ddd;margin:4px;padding:4px;">
-	    	Nav1 //메뉴
+	  <tr height="50px" >
+	    <td width="65%" style = "margin:0px;padding:0px;">
+	    	<div  id="navigator"></div>
 	    </td>
-	    <td	height=50px; style="background-color:#ddd;margin:4px;padding:4px;">
+	    <td	width="35%" style = "margin:0x;padding:0px; ">
 	    	<div  id="weather"></div>
 	    </td>
 	  </tr>
@@ -63,21 +96,21 @@
 	  
   		<!-- 1st row -->
 	  <tr>
-	    <td style="background-color:#ddd;width:280px;">
+	    <td style="background-color:#ddd;">
 	      Section1 //광고 박민지
-	      <p style="background-color:#efefef;width:265px;margin:10px;">
-	      	Article//뉴스광고 김지운씨
+	      <p style="background-color:#efefef;">
+	    	<div  id="newsAds"></div>
 	      </p>
 	    </td>
-	    <td style="background-color:#ddd;height:60px;">
-	    	<div  id="login"></div>
+	    <td style="background-color:#ddd;">
+	    	<div  id="login"></div> 
 	    </td>
 	  </tr>
 	  
 	  	<!-- 2nd row -->
   	  <tr>
 	    <td style="background-color:#ddd;width:280px;">
-			Section2 //뉴스 김지운씨
+	    	<div  id="newsPanel"></div>
 	    </td>
 	     
 	    <td style="background-color:#ddd;height:60px;">

@@ -6,6 +6,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
     
@@ -17,7 +20,7 @@
 	
 	<style type="text/css">
 		* {
-			font-family: 'Jua', sans-serif;
+			font-family: 'Do Hyeon', sans-serif;
 		}
 		
 		#head-form{
@@ -49,7 +52,7 @@
 		}
 		
 		.main {
-		/* background-color:gray; */
+		 /* background-color:gray;  */
 			width: 55%;
 
 			margin: 0 auto;
@@ -103,13 +106,13 @@
 					
 					text-align:left;
 					
-					width: 200px;
-					height: 50px;
+					width: 350px;
+					height: 200px;
 					background-color:#FF007F;
 					
 					padding: 0px;
 					margin: 0 auto;
-					margin-left: 25px;
+					margin-left: 35px;
 				}
 		
 			.middle_row{
@@ -137,38 +140,42 @@
 						
 						padding: 0px;
 						margin: 0 auto; 
-						margin-top: 50px;
+						margin-top: 30px;
 						margin-left: 15px;
 					} 
 				.middle_2 {
 					display: inline-block;
 					text-align:right;
-					
+											
+					height: 800px;
+					position: absolute;
+										
 					padding: 0px;
 					margin: 0 auto; 
-					margin-left: 45px;
+					margin-top: 200px;
+					margin-left: 60px;
 
-					background-color: purple;
+					border: 1px dotted purple;
 				}
 					#shopping {
 						display: inline-block;
 						
 						width: 350px;
-						height: 550px;
-						 
+						height: 800px;
+						
 						padding: 0px;
 						margin: 0 auto; 
 					} 
 			.last_row {
 				display: inline-block;
-				width:100%;
+				width: 80%;
 				margin: 0 auto;
 				padding:0 auto;
 			}
 				#recBook {
 					display: inline-block;
 					
-					text-align: center;
+					text-align: left;
 					margin: 0px auto;
 					padding:0 auto;
 				}
@@ -197,7 +204,7 @@
 			
 			$("#newsPanel").load("../news/NewsFile.html");
 			
-			/*  $("#shopping").load("../shopping/shopping.html");  */
+			$("#shopping").load("../shopping/shopping.html"); 
 			
 			$("#tabMenu").load("../tabMenu/tabMenu.html");
 			$("#recBook").load("../RText/bookpage.html");

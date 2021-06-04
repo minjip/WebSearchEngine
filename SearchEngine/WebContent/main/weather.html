@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- slick slider -->
+	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+	
+	<!-- weather -->
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 	<script src="https://kit.fontawesome.com/97e0c75126.js" crossorigin="anonymous"></script>
-	<script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF" crossorigin="anonymous"></script>
-	
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 	
 	
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	
 	<style type="text/css">
+		
 		.weather-form {
+			float:right;
+			height: 100%;
   			color: #666633;
+  			
+  			text-align: right;
+  			margin: 0 auto;
+			padding:0 auto;
+		}
+  		.weather-form .CurrIcon .CurrTemp .City {
+			display: inline-block;
+		 	background: #eee;
+		 }
+		 
+  		.weather-form > div {
+  			float:left;
+  			font-size: 20px;
+  			margin-right: 15px;
   		}
+  		
+  		
 	</style>
-	
 		
 	<script type="text/javascript">
+	 	
 		$(document).ready(function() {
+		 
 			let weatherIcon = {
 					'01' : 'fas fa-sun',
 					'02' : 'fas fa-cloud-sun', 
@@ -51,11 +75,11 @@
 					console.log(data);
 				}
 			})
-		}); 
-	
+		});
+			
+
+		
 	</script>
-	
-	
 </head>
 
 <body>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+	
+		*{
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		
+		div{
+			width: 350px;
+			
+			}
+	
+		
+		#click_link{
+			
+			width: 300px;
+			height: 50px;
+			text-align:center;
+			
+			background: #EAEAEA;
+			font-family: "고딕체";
+			font-size: 10pt;
+			
+			
+			line-height: 25px;
+		}
+		
+		.input{
+			text-decoration: none;
+			color:#5D5D5D;
+		}
+		
+		.input:hover{
+			color: #F361A6;
+		}
+		
+		.bt{
+			width:10px;
+			height:20px;
+			background: red;
+		}
+		
+		
+		.li_image{
+			list-style: none;	
+			
+			}
+	
+	
+	 	.image_box{
+	 		width:100px;
+	 		overflow: hidden;
+	 		float: left;	
+	 		margin: 0px;
+	 		padding: 0px;	
+	 	}
+	 	
+	 	.in_image{
+	 		width:100px;
+		    height:150px;
+		    object-fit:cover;
+	 	}
+	 	
+	 	#shopping_box{
+	 		transform: scale(1);
+	 		transition: all 0.2s ease-in-out;  
+	 	}
+	 	
+	 	#shopping_box:hover{
+	 		 transform: scale(1.1);
+	 	}
+	 	
+	 	.in_input1{
+	 		font-size: 8pt;
+	 		 text-align: center; 
+	 		font-style: bold;
+	 		
+	 	}
+	 	.in_input2{
+	 		font-size: 8pt;
+	 	 	text-align: center;
+	 	}
+	 	
+	 	ul{
+	 		width:300px;
+	 		height: 500px;
+	 		
+	 	}
+	 	
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$(".image_box").click(function() {
+				"http://www.bazaarmall.co.kr/"
+			})
+		})
+	</script>
+
+	
+</head>
+
+<body>
+
+	<form>
+		<h4>트렌디 쇼핑></h4>
+		<table id="click_link">
+			<tr>
+				<td><a class="input" href="https://www.gmarket.co.kr/">G마켓</a></td>
+				<td><a class="input" href="http://www.auction.co.kr/">옥션</a></td>
+				<td><a class="input" href="https://www.11st.co.kr/main">11번가</a></td>
+				<td><a class="input" href="http://www.ssg.com/">이마트몰</a></td>
+			</tr>
+			<tr>
+				<td><a class="input" href="https://front.wemakeprice.com/main">위메프</a></td>
+				<td><a class="input" href="http://www.ssg.com/">SSG</a></td>
+				<td><a class="input" href="https://www.gsshop.com/">GS샵</a></td>
+				<td><a class="input" href="https://www.coupang.com/">쿠팡</a></td>
+			</tr>
+		</table>
+		
+		
+<!-- 두번째 쇼핑창 -->
+		<div>
+		<ul>
+			<li  class = "li_image">
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" onclick="location.href='http://www.bazaarmall.co.kr/'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_1.PNG">	
+				<p class = "in_input1" >봄바랑 살랑살랑</p>
+				<p class ="in_input2">1+1 이벤트</p>
+				</div>
+			
+			</li>
+			
+			<li  class = "li_image">
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" 
+				onclick="location.href='http://www.pocketdosirak.com/shop/shopdetail.html?branduid=2111600&ref=nabox1&utm_source=naver&utm_medium=da&utm_campaign=nv_trendproduct_shoppingmall&NaPm=ct%3Dkpbqu8iw%7Cci%3D031226d6455db04966b88b6aec373e5c580e7faa%7Ctr%3Dsbtp%7Csn%3D742359%7Chk%3D36c4b23a05f64c77307569c5372d6fa901cec2a4'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_2.PNG">	
+				<p class = "in_input1" >No! stress</p>
+				<p class ="in_input2">저칼로리 식단!</p>
+				</div>
+				
+			</li >
+			
+			
+			<li  class = "li_image">
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" 
+				onclick="location.href='https://creamcheese.co.kr/?cafe_mkt=ntbox_c01&cafe_prdNo=4494#anchorBoxName_4494&NaPm=ct%3Dkpbqx1ls%7Cci%3Ddd02e2e015ae23c963919ad72019e19d0eaa4fe8%7Ctr%3Dsbtp%7Csn%3D1006024%7Chk%3Dac31878001dd0a10a487982363df8b11aab89ca1'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_3.PNG">	
+				<p class = "in_input1" >!!!기획특가!!!</p>
+				<p class ="in_input2">전상품 무료배송</p>
+				</div>
+			</li>
+		
+		
+		
+			<li  class = "li_image">
+			
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" onclick="location.href='http://www.akiii.co.kr/?da_ref=Yz1sUXNEUlY=&NaPm=ct%3Dkpcfc8u8%7Cci%3D46a00d2972818a6f0a2c0c90c0f767cc3f32fe52%7Ctr%3Dsbtp%7Csn%3D249965%7Chk%3D81867fa8bda8d2a933c8ce87b4eb873782c0b4ba'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_4.PNG">	
+				<p class = "in_input1" >역대급 운동화 1+1</p>
+				<p class ="in_input2">5월한정세일까지!</p>
+				</div>
+			
+			</li>
+			
+			<li  class = "li_image">
+			
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" 
+				onclick="location.href='https://www.xexymix.com/shop/shopbrand.html?xcode=012&type=Y&ref=napc2&da_ref=Yz1pYWE2WkI=&NaPm=ct%3Dkpcf73nk%7Cci%3Dca698a5ad0ee715170478392b155c4e5223cfeb2%7Ctr%3Dsbtp%7Csn%3D289665%7Chk%3D7301117dbe676a4ce5add6cbcf2ef6559ed4b533'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_5.PNG">	
+				<p class = "in_input1" >젝시믹스6th특가!!</p>
+				<p class ="in_input2">보정력끝판왕~1+1</p>
+				</div>
+				
+			</li>
+			
+			<li  class = "li_image">
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" 
+				onclick="location.href='https://prumwellness.com/products?categoryId=14&NaPm=ct%3Dkpcf87s0%7Cci%3D3624dc1b724a764569e19cfcb78dda1557f4f79a%7Ctr%3Dsbtp%7Csn%3D1082332%7Chk%3Da51e6e435af01c8fd98b678bce3b8f71b2760d0e'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_6.PNG">	
+				<p class = "in_input1" >KF94블랙 특가</p>
+				<p class ="in_input2">장당 199원</p>
+				</div>
+			</li>
+			
+			<li  class = "li_image">
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" 
+				onclick="location.href='https://theninemall.com/?cafe_mkt=ntbox_b01&NaPm=ct%3Dkpcf64xk%7Cci%3Da4f428867baee5fb92528431a12790abbdc92b5e%7Ctr%3Dsbtp%7Csn%3D679209%7Chk%3D39da17d12eddea86d580bcae01487b1d85864bf8'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_7.PNG">	
+				<p class = "in_input1" >귀여워~ 맘에 쏙!</p>
+				<p class ="in_input2">41%↓ 할인 + 무배!!</p>
+				</div>
+			</li>
+			
+			<li>
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" 
+				onclick="location.href='https://like-you.kr/?cafe_mkt=ntbox_c01&cafe_prdNo=12873#anchorBoxName_12873&utm_source=naver&utm_medium=shopping_ads&utm_campaign=naver_thumbnail_trends_ad&NaPm=ct%3Dkpcf9ezk%7Cci%3D7eaa08c7044d2bed4f80beb468a61fb11a79bade%7Ctr%3Dsbtp%7Csn%3D506731%7Chk%3D7d8290e03d035fe3c78377e372b80a7538f6e209'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_8.PNG">	
+				<p class = "in_input1" >가볍게 툭~</p>
+				<p class ="in_input2">입어도 BEST</p>
+				</div>
+			</li>
+			
+			<li  class = "li_image">
+				<div class = "image_box" id="shopping_box"
+				style="cursor:pointer" 
+				onclick="location.href='https://smartstore.naver.com/zespa/products/5341184559?NaPm=ct%3Dkpcfb69c%7Cci%3Dfdf24736a28b14784653bbe1c661e44208a7f044%7Ctr%3Dsbtp%7Csn%3D187924%7Chk%3Daf204fd85a53ec1ad58d09ea6bb83e8f6cebed18'"> 
+				<img class = "in_image" src="../image/shoppingImage/image_9.PNG">	
+				<p class = "in_input1" >눕기만해도바른목</p>
+				<p class ="in_input2">누워넥 56% 할인!</p>
+				</div>
+			</li>
+	
+		</ul>
+	</div>
+	
+	
+</form>
+
+</body>
+</html>

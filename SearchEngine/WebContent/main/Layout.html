@@ -6,6 +6,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 	
+	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    
+    <script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+	
+	
 	<meta charset="UTF-8">
 	<title>Layout</title>
 	
@@ -13,131 +19,254 @@
 		* {
 			font-family: 'Jua', sans-serif;
 		}
+		
+		#head-form{
+			height: 100px;
+			width: 100%;
+			margin: 0 auto;
+			padding:0 auto;
+		}
+		#header {
+			width:100%;
+			margin: 0 auto;
+			padding:0 auto;
+			/* position: fixed; */
+		}
 		#googleSearch {
 			background-color: #ddd; 
 			display: block;
 			
-			height: 200px;
-			margin: 100 auto;
-  			padding: 0px;
-		}
-		#newsAds {
-			display:inline-block;
-			
-			width: 70%;
-			padding: 0px;
+			height: 100px;
 			margin: 0 auto;
+ 			padding: 0px;
 		}
-		#login {
-			display:inline-block;
-			
-			width:30px;
-			padding: 0px;
+		
+		.header-navi {
+			width:70%;
+			height: 50px;
 			margin: 0 auto;
+			padding:0 auto;
 		}
+		
+		.main {
+		/* background-color:gray; */
+			width: 55%;
+
+			margin: 0 auto;
+			padding:0 auto;
+		}
+			.first_row {
+				display: inline-block;
+			
+				text-align: left;
+			
+				width:100%;
+				height: 150px;
+				margin: 0 auto;
+				padding:0 auto;
+			}
+				#sideAds {
+					display: inline-block;
+					
+					height: 135px;
+					
+					padding: 0px;
+					margin: 10px auto;
+					
+					padding-right: 50px;
+					margin-left: 10px;
+				}
+				#login {
+					display: inline-block;
+					
+					padding: 0px;
+					margin: 0 auto;
+				}
+		
+			.first_half_row{
+				width:100%;
+				height: 50px;
+				margin: 10px 0px 20px 0px;
+				padding:0 auto;
+			}
+				#newsAds {
+					display: inline-block;
+					
+					width: 700px;
+					text-align: left;
+					
+					padding: 0px;
+					margin:  0px 50px 0px 50px;
+				}
+				#sideAds2 {
+					display: inline-block;
+					
+					text-align:left;
+					
+					width: 200px;
+					height: 50px;
+					background-color:#FF007F;
+					
+					padding: 0px;
+					margin: 0 auto;
+					margin-left: 25px;
+				}
+		
+			.middle_row{
+				width:100%;
+				height: 800px;
+				margin: 5px 0px 10px 0px;
+				padding:0 auto;
+			}
+				.middle_1 {
+					display: inline-block;
+					text-align:left;
+					
+					width: 800px;
+				}
+					#newsPanel {
+						display: inline-block;
+						
+						width: 800px;
+						 
+						padding: 0px;
+						margin: 0 auto; 
+					}
+					#tabMenu {
+						display: inline-block;
+						
+						padding: 0px;
+						margin: 0 auto; 
+						margin-top: 50px;
+						margin-left: 15px;
+					} 
+				.middle_2 {
+					display: inline-block;
+					text-align:right;
+					
+					padding: 0px;
+					margin: 0 auto; 
+					margin-left: 45px;
+
+					background-color: purple;
+				}
+					#shopping {
+						display: inline-block;
+						
+						width: 350px;
+						height: 550px;
+						 
+						padding: 0px;
+						margin: 0 auto; 
+					} 
+			.last_row {
+				display: inline-block;
+				width:100%;
+				margin: 0 auto;
+				padding:0 auto;
+			}
+				#recBook {
+					display: inline-block;
+					
+					text-align: center;
+					margin: 0px auto;
+					padding:0 auto;
+				}
+				#recMovie {
+					display: inline-block;
+					
+					text-align: center;
+					margin: 0px auto;
+					padding:0 auto;
+				}
+				
 	</style>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#googleSearch").load("./GoogleSearch.html");
-		})
-	
-		$(document).ready(function() {
+			
 			$("#navigator").load("./navi.html");
-		})
-		$(document).ready(function() {
 			$("#weather").load("./weather.html");
-		})
-		
-		$(document).ready(function() {
-			$("#recMovie").load("./recMovie.html");
-		})
-
-		$(document).ready(function() {
-			$("#newsAds").load("../news/NewsAds.html");
-		})
-		$(document).ready(function() {
+			
+			$("#sideAds").load("../sideAds/sideAds.html");
 			$("#login").load("../exam/login_button.html");
-		})
-		
-		$(document).ready(function() {
+			
+			$("#newsAds").load("../news/NewsAds.html");
+			//sideads2
+			
 			$("#newsPanel").load("../news/NewsFile.html");
-		})
-		
-		$(document).ready(function() {
+			
+			/*  $("#shopping").load("../shopping/shopping.html");  */
+			
+			$("#tabMenu").load("../tabMenu/tabMenu.html");
 			$("#recBook").load("../RText/bookpage.html");
-		})
-		
+			
+			$("#recMovie").load("./recMovie.html");
+		});
+	
 	</script>
 </head>
 
 
 <body>
 
-	<table width="80%" style="text-align:center; border:none; margin: 0 auto; padding: 0px;">
 		
-		<!-- Header -->
-	  <tr>
-	    <td colspan="2" style="margin: 0px; padding:0px;">
-	    	<div  id="googleSearch"></div>
-	    </td>
-	  </tr>
+	<!-- Header -->
+	<form id="head-form">
+		<div id="header">
+			<div  id="googleSearch"></div>
+		</div>
+	</form>
 	  
-  		<!-- Navigator -->
-	  <tr height="50px" >
-	    <td width="65%" style = "margin:0px;padding:0px;">
-	    	<div  id="navigator"></div>
-	    </td>
-	    <td	width="35%" style = "margin:0x;padding:0px; ">
-	    	<div  id="weather"></div>
-	    </td>
-	  </tr>
+	<!-- Navigator -->
+	<div class="header-navi" >
+		<div id="navigator" style = "margin-top:15px; width: 80%; float:left;"></div>
+		<div id="weather" style = "margin-top:15px; width: 20%; height:45px; float:right;"></div>
+	</div>
 	  
-	  
+	<!--  main body	 -->  
+	<div class="main" style="width:65%; text-align:center; border:none; margin: 0 auto; padding: 0px;">
+  		
   		<!-- 1st row -->
-	  <tr>
-	    <td style="background-color:#ddd;">
-	      Section1 //광고 박민지
-	      <p style="background-color:#efefef;">
-	    	<div  id="newsAds"></div>
-	      </p>
-	    </td>
-	    <td style="background-color:#ddd;">
-	    	<div  id="login"></div> 
-	    </td>
-	  </tr>
-	  
-	  	<!-- 2nd row -->
-  	  <tr>
-	    <td style="background-color:#ddd;width:280px;">
-	    	<div  id="newsPanel"></div>
-	    </td>
-	     
-	    <td style="background-color:#ddd;height:60px;">
-	    	Aside2//쇼핑 이지연
-	    </td>
-	  </tr>
-	  
-	  	<!-- 3rd row -->
-   	  <tr>
-	    <td style="background-color:#ddd;width:280px;">
-	    	<div  id="recBook"></div>
-	    </td>
-	     
-	    <td style="background-color:#ddd;height:60px;">
-			<!-- //추천 영상 박민지 -->
+		<div class="first_row" align="left">
+			<div  id="sideAds"></div> 
+			<div  id="login"></div> 
+		</div>
+		
+		<!-- 1.5 row -->
+		<div class="first_half_row" align="left"> 
+			<div  id="newsAds"></div>
+			<div  id="sideAds2">asd</div>
+		</div>
+		  
+		<!-- news panel -->
+		<div class="middle_row" align="left">
+			<div class="middle_1">
+				<div  id="newsPanel"></div>
+				<div  id="tabMenu"></div>
+			</div>
+			<div class="middle_2">
+				<!-- shopping panel -->	
+				<div  id="shopping"></div>
+			</div>
+		</div>
+		
+		<!-- fianl row -->
+		<div class="last_row" align="center">
+			<!-- book panel -->
+			<div  id="recBook"></div>
+			<!-- movie panel -->
 			<div  id="recMovie"></div>
-		</td>
-	  </tr>
-	  
+		</div>
+		
+		  
 		<!-- Footer -->	
-	  <tr>
-	    <td colspan="2" style="background-color:#ddd">
+		<div >
 	    	Footer
-	    </td>
-	  </tr>
+		</div>
 	  
-	</table>
+	</div>
 
 </body>
 </html>

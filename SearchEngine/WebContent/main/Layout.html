@@ -58,106 +58,68 @@
 			margin: 0 auto;
 			padding:0 auto;
 		}
-			.first_row {
-				display: inline-block;
-			
-				text-align: left;
-			
-				width:100%;
-				height: 150px;
-				margin: 0 auto;
-				padding:0 auto;
+		/* main_left */
+			.main_left {
+					float:left;
+					width: 75%;
+					
+					padding: 0px;
+					margin:  0px auto;
 			}
 				#sideAds {
-					display: inline-block;
-					
 					height: 135px;
-					
-					padding: 0px;
-					margin: 10px auto;
-					
-					padding-right: 50px;
-					margin-left: 10px;
+					margin-bottom: 20px;
 				}
-				#login {
-					display: inline-block;
-					
-					padding: 0px;
-					margin: 0 auto;
-				}
-		
-			.first_half_row{
-				width:100%;
-				height: 50px;
-				margin: 10px 0px 20px 0px;
-				padding:0 auto;
-			}
 				#newsAds {
-					display: inline-block;
+					float:center;
+					padding: 0px;
+					margin:  0px auto;
+					margin-bottom: 20px;
+				}
+				#newsPanel {
+					float:left;
 					
-					width: 700px;
-					text-align: left;
+					height: 230px;
 					
 					padding: 0px;
-					margin:  0px 50px 0px 50px;
+					margin: 0 auto; 
+				}
+				#tabMenu {
+					float:left;
+					
+					padding: 0px;
+					margin: 0 auto; 
+					margin-top: 30px;
+					margin-left: 15px;
+					margin-bottom: 20px;
+				} 
+		/* main_right */
+			.main_right {
+					float:left;
+					width: 20%;
+					padding: 0px;
+					margin:  0px auto;
+					margin-left: 10px;
+			}
+				#login {
+					margin: 0 auto;
+					padding: 0;
+					margin-bottom: 50px;
 				}
 				#sideAds2 {
 					display: inline-block;
-					
 					text-align:left;
 					
-					width: 350px;
+					width: 300px;
 					height: 200px;
 					background-color:#FF007F;
 					
 					padding: 0px;
 					margin: 0 auto;
-					margin-left: 35px;
+					margin-left: 30px;
+					margin-bottom: 50px;
 				}
-		
-			.middle_row{
-				width:100%;
-				height: 800px;
-				margin: 5px 0px 10px 0px;
-				padding:0 auto;
-			}
-				.middle_1 {
-					display: inline-block;
-					text-align:left;
-					
-					width: 800px;
-				}
-					#newsPanel {
-						display: inline-block;
-						
-						width: 800px;
-						 
-						padding: 0px;
-						margin: 0 auto; 
-					}
-					#tabMenu {
-						display: inline-block;
-						
-						padding: 0px;
-						margin: 0 auto; 
-						margin-top: 30px;
-						margin-left: 15px;
-					} 
-				.middle_2 {
-					display: inline-block;
-					text-align:right;
-											
-					height: 800px;
-					position: absolute;
-										
-					padding: 0px;
-					margin: 0 auto; 
-					margin-top: 200px;
-					margin-left: 60px;
-
-					border: 1px dotted purple;
-				}
-					#shopping {
+				#shopping {
 						display: inline-block;
 						
 						width: 350px;
@@ -165,17 +127,20 @@
 						
 						padding: 0px;
 						margin: 0 auto; 
-					} 
-			.last_row {
+						
+						border: 1px dotted purple;
+				} 
+					
+			.main_last {
 				display: inline-block;
-				width: 80%;
+				text-align:center;
 				margin: 0 auto;
 				padding:0 auto;
 			}
 				#recBook {
 					display: inline-block;
 					
-					text-align: left;
+					text-align: center;
 					margin: 0px auto;
 					padding:0 auto;
 				}
@@ -185,6 +150,7 @@
 					text-align: center;
 					margin: 0px auto;
 					padding:0 auto;
+					margin-top: 20px;
 				}
 				
 	</style>
@@ -200,6 +166,8 @@
 			$("#login").load("../exam/login_button.html");
 			
 			$("#newsAds").load("../news/NewsAds.html");
+			/* $("#sideAds2").load("../sideAds/sideAds.html"); */
+			
 			//sideads2
 			
 			$("#newsPanel").load("../news/NewsFile.html");
@@ -207,7 +175,7 @@
 			$("#shopping").load("../shopping/shopping.html"); 
 			
 			$("#tabMenu").load("../tabMenu/tabMenu.html");
-			$("#recBook").load("../RText/bookpage.html");
+			/* $("#recBook").load("../RText/bookpage.html"); */
 			
 			$("#recMovie").load("./recMovie.html");
 		});
@@ -218,7 +186,7 @@
 
 <body>
 
-		
+
 	<!-- Header -->
 	<form id="head-form">
 		<div id="header">
@@ -228,52 +196,41 @@
 	  
 	<!-- Navigator -->
 	<div class="header-navi" >
-		<div id="navigator" style = "margin-top:15px; width: 80%; float:left;"></div>
-		<div id="weather" style = "margin-top:15px; width: 20%; height:45px; float:right;"></div>
+		<div id="navigator" style = "margin-top:15px; width: 70%; float:left;"></div>
+		<div id="weather" style = "margin-top:15px; width: 20%; height:45px;float:left;"></div>
 	</div>
 	  
 	<!--  main body	 -->  
 	<div class="main" style="width:65%; text-align:center; border:none; margin: 0 auto; padding: 0px;">
   		
-  		<!-- 1st row -->
-		<div class="first_row" align="left">
+  		<!-- main_left -->
+  		<div class="main_left">
 			<div  id="sideAds"></div> 
-			<div  id="login"></div> 
-		</div>
-		
-		<!-- 1.5 row -->
-		<div class="first_half_row" align="left"> 
 			<div  id="newsAds"></div>
-			<div  id="sideAds2">asd</div>
+			<div  id="newsPanel"></div>
+			<div  id="tabMenu"></div>
 		</div>
-		  
-		<!-- news panel -->
-		<div class="middle_row" align="left">
-			<div class="middle_1">
-				<div  id="newsPanel"></div>
-				<div  id="tabMenu"></div>
-			</div>
-			<div class="middle_2">
-				<!-- shopping panel -->	
-				<div  id="shopping"></div>
-			</div>
+		<!-- main_right -->  
+		<div class="main_right">
+			<div  id="login"></div> 
+			<div  id="sideAds2"></div>
+			<div  id="shopping"></div>
 		</div>
-		
-		<!-- fianl row -->
-		<div class="last_row" align="center">
+		<!-- final row -->
+		<div class="main_last" align="center">
 			<!-- book panel -->
 			<div  id="recBook"></div>
 			<!-- movie panel -->
 			<div  id="recMovie"></div>
 		</div>
 		
-		  
 		<!-- Footer -->	
 		<div >
 	    	Footer
 		</div>
-	  
 	</div>
+	
+	<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로">맨위로</a>
 
 </body>
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	
+	<!-- weather -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+	<script src="https://kit.fontawesome.com/97e0c75126.js" crossorigin="anonymous"></script>
+	
+	
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+		
+		.weather-form {
+			float:right;
+			height: 100%;
+  			color: #666633;
+  			
+  			text-align: right;
+  			margin: 0 auto;
+			padding:0 auto;
+		}
+  		.weather-form .CurrIcon .CurrTemp .City {
+			display: inline-block;
+		 	background: #eee;
+		 }
+		 
+  		.weather-form > div {
+  			float:left;
+  			font-size: 20px;
+  			margin-right: 15px;
+  		}
+  		
+  		
+	</style>
+		
+	<script type="text/javascript">
+	 	
+		$(document).ready(function() {
+		 
+			let weatherIcon = {
+					'01' : 'fas fa-sun',
+					'02' : 'fas fa-cloud-sun', 
+					'03' : 'fas fa-cloud', 
+					'04' : 'fas fa-cloud-meatball', 
+					'09' : 'fas fa-cloud-sun-rain', 
+					'10' : 'fas fa-cloud-showers-heavy', 
+					'11' : 'fas fa-poo-storm', 
+					'13' : 'far fa-snowflake', 
+					'50' : 'fas fa-smog'
+			};
+	
+			$.ajax({
+				url: 'http://api.openweathermap.org/data/2.5/weather?q=' + 'Seoul'
+					+ '&appid=' + '2ee3665374e4d7607308804ed94e7e4a' + '&units=metric',
+				dataType: 'json',
+				type: 'GET',
+				success: function(data) {
+					var $Icon = (data.weather[0].icon).substr(0,2);
+					var $Temp = Math.floor(data.main.temp) + 'º';
+					var $city = data.name;
+					
+					$('.CurrIcon').append('<i class="' + weatherIcon[$Icon] +'"></i>');
+					$('.CurrTemp').prepend($Temp);
+					$('.City').append($city); 
+					
+					console.log(data);
+				}
+			})
+		});
+			
+
+		
+	</script>
+</head>
+
+<body>
+	<div class = "weather-form">
+		<div class="CurrIcon"></div>
+		<div class="CurrTemp"></div>
+		<div class="City"></div>
+	</div>
+</body>
+</html>

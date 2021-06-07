@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+
+	
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+		.youtube {
+			display: block;
+			float: center;
+		
+			width: 320px;
+			height: 200px;
+			
+			margin: 0 auto;
+			padding: 0 auto;
+		}
+		#mov {
+			display: inline-block;
+			text-align: center;
+			
+			margin: 0 auto;
+			padding: 0 auto;
+		}
+		 
+		.iframe {
+			width: 320px;
+			height: 200px;
+			
+			margin: 0 auto; 
+			padding: 0 auto;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.youtube').slick({
+				rows: 2,
+				arrows: true,
+				nextArrow: '<i class="fa fa-arrow-right"></i>',
+				prevArrow: '<i class="fa fa-arrow-left"></i>', 
+				slidesPerRow: 1,
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 4500,
+				
+			});
+		})
+	</script>
+</head>
+	
+
+<body>
+	<div style="font-size: 17px; width: 60px;">
+		추천영상
+	</div>
+	<!-- 영상 1 --> 
+	<div class="slider_wrap">
+	<div class="youtube"> <!-- slick1 -->
+		<div id = "mov">
+			<iframe src="https://www.youtube.com/embed/moFB-j5iY2E" title="YouTube video player" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen></iframe>
+		</div>
+		<div id = "mov">
+			<iframe src="https://www.youtube.com/embed/AwrFPJk_BGU" title="YouTube video player" 
+			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen></iframe>
+		</div>
+		<div id = "mov">
+			<iframe src="https://www.youtube.com/embed/gaGtSUdKlKk" title="YouTube video player" 
+			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen></iframe>
+		</div>
+		<div id = "mov">
+			<iframe src="https://www.youtube.com/embed/CBVV-i_mZVc" title="YouTube video player" 
+			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen></iframe>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -52,7 +52,6 @@
 		}
 		
 		.main {
-		 /* background-color:gray;  */
 			width: 55%;
 
 			margin: 0 auto;
@@ -90,7 +89,6 @@
 					padding: 0px;
 					margin: 0 auto; 
 					margin-top: 30px;
-					margin-left: 15px;
 					margin-bottom: 20px;
 				} 
 		/* main_right */
@@ -130,54 +128,61 @@
 						
 						border: 1px dotted purple;
 				} 
-					
+		/* main_last */
 			.main_last {
-				display: inline-block;
-				text-align:center;
+				display: block;
+				float: left;
 				margin: 0 auto;
 				padding:0 auto;
 			}
 				#recBook {
 					display: inline-block;
+					text-align: left;
 					
-					text-align: center;
+					width: 900px;
+					height: 400px;
+
 					margin: 0px auto;
 					padding:0 auto;
+
+					
+					border: 1px dotted purple;
+					
 				}
 				#recMovie {
 					display: inline-block;
+					text-align: left;	
 					
-					text-align: center;
+					width: 300px;
+					height: 300px;
+
 					margin: 0px auto;
 					padding:0 auto;
-					margin-top: 20px;
+					margin-left: 30px;
 				}
 				
 	</style>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$("#googleSearch").load("./GoogleSearch.html");
+			$("#googleSearch").load("../01_navi/GoogleSearch.html");
 			
-			$("#navigator").load("./navi.html");
-			$("#weather").load("./weather.html");
+			$("#navigator").load("../01_navi/navi.html");
+			$("#weather").load("../01_navi/weather.html");
 			
-			$("#sideAds").load("../sideAds/sideAds.html");
-			$("#login").load("../exam/login_button.html");
+			$("#sideAds").load("../02_sideAds/sideAds.html");
+			$("#newsAds").load("../02_news/NewsAds.html");
+			$("#newsPanel").load("../02_news/NewsFile.html");		
+			$("#tabMenu").load("../02_tabMenu/tabMenu.html");
 			
-			$("#newsAds").load("../news/NewsAds.html");
-			/* $("#sideAds2").load("../sideAds/sideAds.html"); */
 			
-			//sideads2
+			$("#login").load("../03_login/login_button.html");
+			/* $("#sideAds2").load("../03_sideAds2/sideAds.html"); */
+			$("#shopping").load("../03_shopping/shopping.html"); 
 			
-			$("#newsPanel").load("../news/NewsFile.html");
 			
-			$("#shopping").load("../shopping/shopping.html"); 
-			
-			$("#tabMenu").load("../tabMenu/tabMenu.html");
-			/* $("#recBook").load("../RText/bookpage.html"); */
-			
-			$("#recMovie").load("./recMovie.html");
+			/* $("#recBook").load("../04_books/bookpage.html"); */
+ 			 $("#recMovie").load("../04_movie/recMovie.html");  
 		});
 	
 	</script>
@@ -225,7 +230,7 @@
 		</div>
 		
 		<!-- Footer -->	
-		<div >
+		<div class="footer" align="center">
 	    	Footer
 		</div>
 	</div>

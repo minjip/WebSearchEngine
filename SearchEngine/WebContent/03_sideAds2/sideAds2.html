@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+
+	
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+		.square_ads {
+			display: block;
+			float: center;
+		
+			width: 300px;
+			height: 200px;
+			
+			margin: 0 auto;
+			padding: 0 auto;
+			
+			background-color: black;
+		}
+		#ads {
+			display: inline-block;
+			text-align: center;
+			
+			margin: 0 auto;
+			padding: 0 auto;
+		}
+		 
+		.iframe {
+			width: 320px;
+			height: 200px;
+			
+			margin: 0 auto; 
+			padding: 0 auto;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.youtube').slick({
+				arrows: true,
+				nextArrow: '<i class="fa fa-arrow-right"></i>',
+				prevArrow: '<i class="fa fa-arrow-left"></i>',
+				
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 4500,
+				
+			});
+		})
+	</script>
+</head>
+	
+
+<body>
+
+	<!-- 영상 1 --> 
+	<div class="slider2">
+        <div class="square_ads">
+			<div id = "ads"></div>
+			<div id = "ads"></div>
+			<div id = "ads"></div>
+			<div id = "ads"></div>
+		</div>
+	</div>
+</body>
+</html>

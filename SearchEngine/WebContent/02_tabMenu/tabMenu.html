@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+	
+		body{
+			margin-top: 40px;
+			line-height: 1.6;
+		}
+		.container{
+			margin: 0 auto;
+		}
+	
+		ul.tabs{
+			text-align:left;
+		
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+			font-size: 20px;
+		}
+		ul.tabs li{
+			background: none;
+			color: #222;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+		
+		ul.tabs li.current{
+			background: #ededed;
+			color: #222;
+		}
+		
+		.tab-content{
+			display: none;
+			background: #ededed;
+			padding: 0px;
+		}
+		
+		.tab-content.current{
+			display: inherit;
+		}
+	
+	</style>
+	
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			
+			$('ul.tabs li').click(function(){
+				var tab_id = $(this).attr('data-tab');
+	
+				$('ul.tabs li').removeClass('current');
+				$('.tab-content').removeClass('current');
+	
+				$(this).addClass('current');
+				$("#"+tab_id).addClass('current');
+			})
+			
+			$("#perform").load("../02_tabMenu/perform.html");
+			$("#animal").load("../02_tabMenu/animal.html");
+			$("#health").load("../02_tabMenu/health.html");
+			$("#beauty").load("../02_tabMenu/beauty.html");
+	
+		})
+	
+	</script>
+</head>
+
+
+<body>
+	<div style="font-size: 17px; margin-left: 5px; width: 150px;">
+		오늘 읽을만한 글
+	</div>
+	<div class="container">
+	
+		<ul class="tabs">
+			<li class="tab-link current" data-tab="tab-1">문화/공연</li>
+			<li class="tab-link" data-tab="tab-2">동물</li>
+			<li class="tab-link" data-tab="tab-3">건강</li>
+			<li class="tab-link" data-tab="tab-4">뷰티</li>
+		</ul>
+		
+		<div id="tab-1" class="tab-content current" style="width: 900px;">
+			<div id="perform" style="height: 600px;margin-top: 10px;margin-left: 20px;">
+			</div>
+		</div>
+		<div id="tab-2" class="tab-content" style="width: 900px;">
+			<div id="animal" style="height: 600px;margin-top: 10px;margin-left: 20px;">
+			</div>
+		</div>
+		<div id="tab-3" class="tab-content" style="width: 900px;">
+			<div id="health" style="height: 600px;margin-top: 10px;margin-left: 20px;">
+			</div>
+		</div>
+		<div id="tab-4" class="tab-content" style="width: 900px;">
+			<div id="beauty" style="height: 600px;margin-top: 10px;margin-left: 20px;">
+			</div>
+		</div>
+		
+
+	</div>
+
+</body>
+</html>

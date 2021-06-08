@@ -6,14 +6,29 @@
   <link rel="stylesheet" href="style.css">
   <title>Insert title here</title>
 <style type="text/css">
-h1 {
-  color: blue;
-  text-shadow: 3px 3px 5px #444444;
-  background: #cccccc;
-}  
 
-p1{font-size:20px;}
+p1{font-size:20px; width: 100px;}
 p2{font-size:16px;}
+.thumbnail {
+	width: 100px;
+}
+.caption {
+	width: 100px;
+}
+.thumbnails {
+	width: 800px;
+	height: 380px;
+	list-style:none;
+    margin:0;
+    padding:0;
+}
+.span4 {
+	width: 100px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border: 0;
+	float: left;
+}
 </style>
 </head>
 <body>
@@ -21,82 +36,79 @@ p2{font-size:16px;}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js"></script>
 <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet" />
-<hr>
-<h1 style="font-size: 15px;text-align: center; width: 100px;">
+<h1 style="font-size: 17px;text-align: center; width: 100px;">
 	이달의 추천도서
 </h1>
-
+<hr>
 <!-- <font size="4">이 페이지는 이학계 및 공학계 학생들을 위한 기초 수학 및 물리학 추천도서를 소개하는 페이지입니다.</font> -->
-<br>
-<br>
-<div class="container" style="width: 500px">
-  <div class="row">
+<div class="Bcontainer" style="height: 250px;">
+  <div class="row" style="height: 250px;">
     <div class="carousel slide" id="myCarousel" align="center">
-      <div class="carousel-inner">
-        <div class="item active" align="center">
+      <div class="carousel-inner" style="width: 600px; height: 250px;">
+        <div class="item active" align="center" style="width: 600px;height: 250px;">
           <ul class="thumbnails">
-            <li class="span4" >
+            <li class="span4"  style="width: 200px;">
               <div class="caption" align="center">
                 <p1>미분적분학</p1>
               </div>
               <div class="thumbnail" align="center">
                 <a href="../04_books/Rcalculus.html">
-                <img src="../image/bookImage/calculus.jpg" width="100" height="280"></a>
+                <img src="../image/bookImage/calculus.jpg" width="200" ></a>
               </div>
             </li>
-            <li class="span4">
+            <li class="span4" style="width: 200px;">
               <div class="caption" align="center">
                 <p1>선형대수학</p1>
               </div>
               <div class="thumbnail" align="center">
                 <a href="../04_books/Rlinearalgebra.html">
-                <img src="../image/bookImage/LinearAlgebra.jpg" width="100" height="280"></a>
+                <img src="../image/bookImage/LinearAlgebra.jpg" width="200" ></a>
               </div>
             </li>
-            <li class="span4">
+            <li class="span4" style="width: 200px;">
               <div class="caption" align="center">
                 <p1>해석학</p1>
               </div>
               <div class="thumbnail" align="center">
                 <a href="../04_books/Ranalysis.html">
-                <img src="../image/bookImage/analysis.jpg" width="100" height="280"></a>
+                <img src="../image/bookImage/analysis.jpg" width="200"  ></a>
               </div>
             </li>
           </ul>
         </div>
-        <div class="item">
+        <div class="item" align="center" style="width: 600px;height: 250px;">
           <ul class="thumbnails" align="center">
-            <li class="span4">
+            <li class="span4" style="width: 200px;">
               <div class="caption" align="center">
                 <p1>일반물리학</p1>
               </div>
               <div class="thumbnail" align="center">
                 <a href="./Rgphysics.html">
-                <img src="../image/bookImage/physics.jpg" width="100" height="280"></a>
+                <img src="../image/bookImage/physics.jpg" width="200"  ></a>
               </div>
             </li>
-            <li class="span4">
+            <li class="span4" style="width: 200px;">
               <div class="caption" align="center">
                 <p1>고전역학(뉴턴역학)</p1>
               </div>
               <div class="thumbnail" align="center">
                 <a href="../04_books/Rmechanics.html">
-                <img src="../image/bookImage/mechanics.jpg" width="100" height="280"></a>
+                <img src="../image/bookImage/mechanics.jpg" width="200" ></a>
               </div>
             </li>
-            <li class="span4">
+            <li class="span4" style="width: 200px;">
               <div class="caption" align="center">
                 <p1>양자역학</p1>
               </div>
               <div class="thumbnail" align="center">
                 <a href="../04_books/Rschrodingerequation.html">
-                <img src="../image/bookImage/schrodingerequation.jpg" width="100" height="280"></a>
+                <img src="../image/bookImage/schrodingerequation.jpg" width="200" ></a>
               </div>
             </li>
           </ul>
         </div>
       </div>
-      <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+      <a data-slide="prev" href="#myCarousel" class="left carousel-control" style="margin-bottom: 200px;">‹</a>
       <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
     </div>
   </div>

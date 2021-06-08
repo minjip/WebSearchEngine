@@ -53,7 +53,9 @@
 		
 		.main {
 			width: 55%;
-
+			height: 100%;
+			display: block;
+			float:center; 
 			margin: 0 auto;
 			padding:0 auto;
 		}
@@ -76,19 +78,31 @@
 					margin-bottom: 20px;
 				}
 				#newsPanel {
-					float:left;
+					float:center;
 					
 					height: 230px;
 					
 					padding: 0px;
 					margin: 0 auto; 
+					margin-bottom: 30px;
+				}
+				#recBook { 
+					float:center;
+					
+					height: 300px;
+					padding: 0px;
+					padding: 20px 20px 20px 20px;
+					margin: 0 auto; 
+					margin-top: 50px;
+					margin-bottom: 50px;
+					
+					border: 1px dotted purple;
 				}
 				#tabMenu {
 					float:left;
 					
 					padding: 0px;
 					margin: 0 auto; 
-					margin-top: 30px;
 					margin-bottom: 20px;
 				} 
 		/* main_right */
@@ -118,49 +132,38 @@
 					margin-bottom: 50px;
 				}
 				#shopping {
-						display: inline-block;
-						
-						width: 350px;
-						height: 800px;
-						
-						padding: 0px;
-						margin: 0 auto; 
-						
-						border: 1px dotted purple;
-				} 
-		/* main_last */
-			.main_last {
-				display: block;
-				float: left;
-				margin: 0 auto;
-				padding:0 auto;
-			}
-				#recBook {
 					display: inline-block;
-					text-align: left;
 					
-					width: 900px;
-					height: 400px;
-
-					margin: 0px auto;
-					padding:0 auto;
-
+					width: 350px;
+					height: 800px;
+					
+					padding: 0px;
+					margin: 0 auto; 
 					
 					border: 1px dotted purple;
-					
-				}
+				} 
 				#recMovie {
+					clear: both;
 					display: inline-block;
-					text-align: left;	
+					text-align:left;  
 					
-					width: 300px;
-					height: 300px;
+					width: 370px;
+					height: 200px;
 
-					margin: 0px auto;
-					padding:0 auto;
-					margin-left: 30px;
+					margin: 0;
+					padding:0;
+					margin-top: 20px;
 				}
+
+			.footer {
+				clear:both;
+				width:65%;
 				
+				float:center; 
+				
+				margin: 0 auto; 
+				padding: 0px;
+			}
 	</style>
 	
 	<script type="text/javascript">
@@ -177,12 +180,12 @@
 			
 			
 			$("#login").load("../03_login/login_button.html");
-			/* $("#sideAds2").load("../03_sideAds2/sideAds.html"); */
+			$("#sideAds2").load("../03_sideAds2/sideAds2.html"); 
 			$("#shopping").load("../03_shopping/shopping.html"); 
 			
 			
-			/* $("#recBook").load("../04_books/bookpage.html"); */
- 			 $("#recMovie").load("../04_movie/recMovie.html");  
+			$("#recBook").load("../04_books/bookpage.html"); 
+ 			$("#recMovie").load("../04_movie/recMovie.html");  
 		});
 	
 	</script>
@@ -191,51 +194,53 @@
 
 <body>
 
+	<div>
+		<!-- Header -->
+		<form id="head-form">
+			<div id="header">
+				<div  id="googleSearch"></div>
+			</div>
+		</form>
+		  
+		<!-- Navigator -->
+		<div class="header-navi" >
+			<div id="navigator" style = "margin-top:15px; width: 70%; float:left;"></div>
+			<div id="weather" style = "margin-top:15px; width: 20%; height:45px;float:left;"></div>
+		</div>
+		  
+		<!--  main body	 -->  
+		<div class="main" style="clear:both; width:65%; float:center; border:none; margin: 0 auto; padding: 0px;">
+	  		
+	  		<!-- main_left -->
+	  		<div class="main_left">
+				<div  id="sideAds"></div> 
+				<div  id="newsAds"></div>
+				<div  id="newsPanel"></div>
+				<div  id="recBook"></div>
+				<div  id="tabMenu"></div>
 
-	<!-- Header -->
-	<form id="head-form">
-		<div id="header">
-			<div  id="googleSearch"></div>
-		</div>
-	</form>
-	  
-	<!-- Navigator -->
-	<div class="header-navi" >
-		<div id="navigator" style = "margin-top:15px; width: 70%; float:left;"></div>
-		<div id="weather" style = "margin-top:15px; width: 20%; height:45px;float:left;"></div>
-	</div>
-	  
-	<!--  main body	 -->  
-	<div class="main" style="width:65%; text-align:center; border:none; margin: 0 auto; padding: 0px;">
-  		
-  		<!-- main_left -->
-  		<div class="main_left">
-			<div  id="sideAds"></div> 
-			<div  id="newsAds"></div>
-			<div  id="newsPanel"></div>
-			<div  id="tabMenu"></div>
-		</div>
-		<!-- main_right -->  
-		<div class="main_right">
-			<div  id="login"></div> 
-			<div  id="sideAds2"></div>
-			<div  id="shopping"></div>
-		</div>
-		<!-- final row -->
-		<div class="main_last" align="center">
-			<!-- book panel -->
-			<div  id="recBook"></div>
-			<!-- movie panel -->
-			<div  id="recMovie"></div>
+			</div>
+			<!-- main_right -->  
+			<div class="main_right">
+				<div  id="login"></div> 
+				<div  id="sideAds2"></div>
+				<div  id="shopping"></div>
+				<div  id="recMovie"></div>
+			</div>
+			<!-- final row -->
+			<div class="main_last">
+				<!-- book panel -->
+				<!-- movie panel -->
+			</div>
 		</div>
 		
 		<!-- Footer -->	
-		<div class="footer" align="center">
-	    	Footer
+		<div class="footer" style="clear:both; margin-top: 30px;">
+	    	<hr>
+	    	회사소개 인재채용 제휴제안 이용약관 개인정보처리방침 청소년보호정책 네이버 정책 고객센터ⓒ SearchEngin Corp.
 		</div>
+		
+		<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로">맨위로</a>
 	</div>
-	
-	<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로">맨위로</a>
-
 </body>
 </html>

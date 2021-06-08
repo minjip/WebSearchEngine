@@ -1,74 +1,196 @@
 <!DOCTYPE html>
 <html>
 <head>
+   	<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+    
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	
 	<style type="text/css">
-	.news_form {
-		margin: 0px auto;
-		padding: 0px;
-	}
-	.newsTag {
-		width: 70px;
-		height: 50px;
+		#news_form {
+			width: 910px;
+			height: 230px;
+			
+			margin: 0px auto;
+			padding: 0px;
+		}
 		
-		margin: 0 auto;
-	  	padding: 0px;
-	}
-	.imgTag {
-	  width: 120px;
-	  height: 50px;
-	  object-fit: cover;
-	  
-	  margin: 0 auto;
-	  padding: 0px;
-	}
+		.newsslider{
+ 			width: 913px;
+			height: 135px;
+		}
+		.newsslider .news{
+			margin: 0px auto;
+		}
+		.newsslider .news #news_form {
+			display: inline-block;
+		} 
+		
+		.newsTag {
+			width: 120px;
+			height: 50px;
+			display: inline-block;
+			margin: 0 auto;
+		  	padding: 0px;
+		}
+		.imgTag {
+		  width: 120px;
+		  height: 50px;
+		  object-fit: cover;
+		  display: inline-block;
+		  margin: 0 auto;
+		  padding: 0px;
+		}
+	</style>
 
-</style>
-<!-- bootstrap을 사용하기 위한 설정 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type = "text/javascript">
+		$(document).ready(function(){
+			$('.news').slick(
+			{
+					autoplay : true,
+					dots: false,
+					speed : 300 /* 이미지가 슬라이딩시 걸리는 시간 */,
+					infinite: true,
+					autoplaySpeed: 10000 /* 이미지가 다른 이미지로 넘어 갈때의 텀 */,
+					arrows: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					fade: false 
+			});
+		});
+	</script>
 
 </head>
 
-<body>
-	<div class="news_form" style="display: block;float: left;margin-left: 10px;">
-		<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=056" target="_blank"><img class="imgTag" src="../image/newsImage/kbs.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=214" target="_blank"><img class="imgTag" src="../image/newsImage/mbc.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=055" target="_blank"><img class="imgTag" src="../image/newsImage/sbs.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=052" target="_blank"><img class="imgTag" src="../image/newsImage/ytn.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=917" target="_blank"><img class="imgTag" src="../image/newsImage/tv조선.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=032" target="_blank"><img class="imgTag" src="../image/newsImage/경향신문.png"></a>
-		</div>
-		
-		<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=057" target="_blank"><img class="imgTag" src="../image/newsImage/nbn.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=823" target="_blank"><img class="imgTag" src="../image/newsImage/upi뉴스.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=ct2&pcode=920" target="_blank"><img class="imgTag" src="../image/newsImage/뉴스토마토.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=011" target="_blank"><img class="imgTag" src="../image/newsImage/서울경제.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=143" target="_blank"><img class="imgTag" src="../image/newsImage/쿠키뉴스.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=038" target="_blank"><img class="imgTag" src="../image/newsImage/한국일보.png"></a>
-		</div>
 
-		<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=005" target="_blank"><img class="imgTag" src="../image/newsImage/국민일보.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=814" target="_blank"><img class="imgTag" src="../image/newsImage/미주한국일보.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=387" target="_blank"><img class="imgTag" src="../image/newsImage/노컷뉴스.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=338" target="_blank"><img class="imgTag" src="../image/newsImage/세계일보.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=969" target="_blank"><img class="imgTag" src="../image/newsImage/매일노동뉴스.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=421" target="_blank"><img class="imgTag" src="../image/newsImage/news1.png"></a>
-		</div>
-		
-		<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=914" target="_blank"><img class="imgTag" src="../image/newsImage/뉴스핌.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=020" target="_blank"><img class="imgTag" src="../image/newsImage/동아일보.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=215" target="_blank"><img class="imgTag" src="../image/newsImage/한국경제TV.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=904" target="_blank"><img class="imgTag" src="../image/newsImage/jtbc.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=422" target="_blank"><img class="imgTag" src="../image/newsImage/연합뉴스TV.png"></a>
-			<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=912" target="_blank"><img class="imgTag" src="../image/newsImage/뉴스컬쳐.png"></a>
+<body>
+	<div style="font-size: 17px; margin-left: 25px; width: 150px;">
+		뉴스스탠드 > 전체언론사
+	</div> 
+	
+	
+	<div class="newsslider" style="width: 910px; height: 230px;">
+		<div class="news" style="width: 910px; height: 230px;">  <!-- wrapper -->
+			<div id="news_form">  <!-- post -->
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=056" target="_blank"><img class="imgTag" src="../image/newsImage/kbs.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=214" target="_blank"><img class="imgTag" src="../image/newsImage/mbc.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=055" target="_blank"><img class="imgTag" src="../image/newsImage/sbs.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=052" target="_blank"><img class="imgTag" src="../image/newsImage/ytn.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=917" target="_blank"><img class="imgTag" src="../image/newsImage/tv조선.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=032" target="_blank"><img class="imgTag" src="../image/newsImage/경향신문.png"></a>
+				</div>
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=057" target="_blank"><img class="imgTag" src="../image/newsImage/nbn.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=823" target="_blank"><img class="imgTag" src="../image/newsImage/upi뉴스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=920" target="_blank"><img class="imgTag" src="../image/newsImage/뉴스토마토.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=011" target="_blank"><img class="imgTag" src="../image/newsImage/서울경제.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=143" target="_blank"><img class="imgTag" src="../image/newsImage/쿠키뉴스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=038" target="_blank"><img class="imgTag" src="../image/newsImage/한국일보.png"></a>
+				</div>
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=005" target="_blank"><img class="imgTag" src="../image/newsImage/국민일보.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=814" target="_blank"><img class="imgTag" src="../image/newsImage/미주한국일보.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=387" target="_blank"><img class="imgTag" src="../image/newsImage/노컷뉴스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=338" target="_blank"><img class="imgTag" src="../image/newsImage/세계일보.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=969" target="_blank"><img class="imgTag" src="../image/newsImage/매일노동뉴스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=421" target="_blank"><img class="imgTag" src="../image/newsImage/news1.png"></a>
+				</div>
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=914" target="_blank"><img class="imgTag" src="../image/newsImage/뉴스핌.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=020" target="_blank"><img class="imgTag" src="../image/newsImage/동아일보.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=215" target="_blank"><img class="imgTag" src="../image/newsImage/한국경제TV.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=904" target="_blank"><img class="imgTag" src="../image/newsImage/jtbc.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=422" target="_blank"><img class="imgTag" src="../image/newsImage/연합뉴스TV.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=912" target="_blank"><img class="imgTag" src="../image/newsImage/뉴스컬쳐.png"></a>
+				</div>
+			</div>
+			
+			
+			<div class="news_form" style="display: block;float: left;margin-left: 10px;">
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=410" target="_blank"><img class="imgTag" src="../image/newsImage/mk스포츠.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=806" target="_blank"><img class="imgTag" src="../image/newsImage/money.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=139" target="_blank"><img class="imgTag" src="../image/newsImage/sportal.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=945" target="_blank"><img class="imgTag" src="../image/newsImage/ytn사이언스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=989" target="_blank"><img class="imgTag" src="../image/newsImage/tbc.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=826" target="_blank"><img class="imgTag" src="../image/newsImage/top.png"></a>
+				</div>
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=958" target="_blank"><img class="imgTag" src="../image/newsImage/veritas.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=930" target="_blank"><img class="imgTag" src="../image/newsImage/뉴스타파.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=042" target="_blank"><img class="imgTag" src="../image/newsImage/데일리한국.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=024" target="_blank"><img class="imgTag" src="../image/newsImage/매경.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=006" target="_blank"><img class="imgTag" src="../image/newsImage/미디어.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=970" target="_blank"><img class="imgTag" src="../image/newsImage/소비자가 만드는 신문.png"></a>
+				</div>
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=031" target="_blank"><img class="imgTag" src="../image/newsImage/아이뉴스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=822" target="_blank"><img class="imgTag" src="../image/newsImage/프라일경제.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=028" target="_blank"><img class="imgTag" src="../image/newsImage/한겨례.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=384" target="_blank"><img class="imgTag" src="../image/newsImage/한국대학신문.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=828" target="_blank"><img class="imgTag" src="../image/newsImage/식품지널.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=810" target="_blank"><img class="imgTag" src="../image/newsImage/신아일보.png"></a>
+				</div>
+				
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=015" target="_blank"><img class="imgTag" src="../image/newsImage/한국경제.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=076" target="_blank"><img class="imgTag" src="../image/newsImage/스포츠조선.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=025" target="_blank"><img class="imgTag" src="../image/newsImage/중앙일보.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=368" target="_blank"><img class="imgTag" src="../image/newsImage/데일리안.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=396" target="_blank"><img class="imgTag" src="../image/newsImage/스포츠월드.png"></a> 
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=963" target="_blank"><img class="imgTag" src="../image/newsImage/에너지경제.png"></a>
+				</div>
+			</div>
+			
+			
+			<div class="news_form" style="display: block;float: left;margin-left: 10px;">
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=941" target="_blank"><img class="imgTag" src="../image/newsImage/초이스경제.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=966" target="_blank"><img class="imgTag" src="../image/newsImage/정신의학신문.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=982" target="_blank"><img class="imgTag" src="../image/newsImage/economy.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=440" target="_blank"><img class="imgTag" src="../image/newsImage/티브이데일리.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=815" target="_blank"><img class="imgTag" src="../image/newsImage/법률방송.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=972" target="_blank"><img class="imgTag" src="../image/newsImage/pd.png"></a>
+				</div>
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=094" target="_blank"><img class="imgTag" src="../image/newsImage/산.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=536" target="_blank"><img class="imgTag" src="../image/newsImage/thefact.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=905" target="_blank"><img class="imgTag" src="../image/newsImage/더스쿠프.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=959" target="_blank"><img class="imgTag" src="../image/newsImage/m이코노미뉴스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=014" target="_blank"><img class="imgTag" src="../image/newsImage/파이낸셜뉴스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=029" target="_blank"><img class="imgTag" src="../image/newsImage/디지털타임스.png"></a>
+				</div>
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=416" target="_blank"><img class="imgTag" src="../image/newsImage/sbs연예뉴스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=911" target="_blank"><img class="imgTag" src="../image/newsImage/농민신문.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=825" target="_blank"><img class="imgTag" src="../image/newsImage/이로운넷.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=965" target="_blank"><img class="imgTag" src="../image/newsImage/전기신문.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=135" target="_blank"><img class="imgTag" src="../image/newsImage/시사저널.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=241" target="_blank"><img class="imgTag" src="../image/newsImage/일간스포츠.png"></a>
+				</div>
+			
+				<div style="display: block;float: center;width:800px; height: 60px;margin: 0;padding: 0;">
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=361" target="_blank"><img class="imgTag" src="../image/newsImage/채널예스.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=346" target="_blank"><img class="imgTag" src="../image/newsImage/헬스조선.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=314" target="_blank"><img class="imgTag" src="../image/newsImage/스포츠동아.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=921" target="_blank"><img class="imgTag" src="../image/newsImage/아주경제.png"></a>
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=108" target="_blank"><img class="imgTag" src="../image/newsImage/스타뉴스.png"></a> 
+					<a class="newsTag" href="https://newsstand.naver.com/?list=&pcode=964" target="_blank"><img class="imgTag" src="../image/newsImage/이뉴스투데이.png"></a>
+				</div>
+				
+			</div>
 		</div>
 	</div>
 </body>

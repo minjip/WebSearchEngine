@@ -12,65 +12,56 @@
 	<title>Insert title here</title>
 	
 	<style type="text/css">
-		.square_ads {
-			display: block;
-			float: center;
-		
-			width: 300px;
+ 		.slider2 {
+ 			width: 300px;
 			height: 200px;
-			
-			margin: 0 auto;
-			padding: 0 auto;
-			
-			background-color: black;
 		}
-		#ads {
+		.slider2 .square_ads {
+			margin: 0px auto;
+		}
+		.slider2 .square_ads #ads {
 			display: inline-block;
-			text-align: center;
-			
-			margin: 0 auto;
-			padding: 0 auto;
-		}
-		 
-		.iframe {
-			width: 320px;
+		} 
+		#ads {
+		 	width: 300px;
 			height: 200px;
 			
-			margin: 0 auto; 
-			padding: 0 auto;
+			font-size: 20px;
+			font-style: bold;
 		}
 		
 	</style>
 	
 	<script type="text/javascript">
-		$(document).ready(function() {
-			$('.youtube').slick({
-				arrows: true,
-				nextArrow: '<i class="fa fa-arrow-right"></i>',
-				prevArrow: '<i class="fa fa-arrow-left"></i>',
-				
+	$(document).ready(function(){
+		$('.square_ads').slick(
+		{
+				autoplay : true,
+				dots: true,
+				speed : 300 /* 이미지가 슬라이딩시 걸리는 시간 */,
 				infinite: true,
-				speed: 300,
+				autoplaySpeed: 2000 /* 이미지가 다른 이미지로 넘어 갈때의 텀 */,
+				arrows: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				autoplay: true,
-				autoplaySpeed: 4500,
-				
-			});
-		})
+				fade: false ,
+/* 			    vertical: true,
+			    verticalSwiping: true */
+		});
+	});
 	</script>
 </head>
 	
 
 <body>
 
-	<!-- 영상 1 --> 
+	<!-- sideAds2 --> 
 	<div class="slider2">
         <div class="square_ads">
-			<div id = "ads"></div>
-			<div id = "ads"></div>
-			<div id = "ads"></div>
-			<div id = "ads"></div>
+			<div id = "ads" style="background-color: #91D8FA">광고1</div>
+			<div id = "ads" style="background-color: #66CDAA">광고2</div>
+			<div id = "ads" style="background-color: #96A5FF">광고3</div>
+			<div id = "ads" style="background-color: #FACD87">광고4</div>
 		</div>
 	</div>
 </body>

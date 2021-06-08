@@ -13,21 +13,21 @@
 	
 	<style type="text/css">
 		.youtube {
-			display: block;
-			float: center;
+			display: inline-block;
+			text-align: left;
 		
 			width: 320px;
 			height: 200px;
 			
-			margin: 0 auto;
-			padding: 0 auto;
+			margin: 0;
+			padding: 0;
 		}
 		#mov {
 			display: inline-block;
 			text-align: center;
 			
-			margin: 0 auto;
-			padding: 0 auto;
+			margin: 0;
+			padding: 0;
 		}
 		 
 		.iframe {
@@ -43,7 +43,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.youtube').slick({
-				rows: 2,
+				rows: 1,
 				arrows: true,
 				nextArrow: '<i class="fa fa-arrow-right"></i>',
 				prevArrow: '<i class="fa fa-arrow-left"></i>', 
@@ -62,34 +62,36 @@
 	
 
 <body>
-	<div style="font-size: 17px; width: 60px;">
-		추천영상
-	</div>
+	<div class="slider_wrap" style="display: inline-block;text-align: left;width: 370px;">
+		<div style="font-size: 17px; width: 100px;">
+			추천영상
+		</div>
 	<!-- 영상 1 --> 
-	<div class="slider_wrap">
-	<div class="youtube"> <!-- slick1 -->
-		<div id = "mov">
-			<iframe src="https://www.youtube.com/embed/moFB-j5iY2E" title="YouTube video player" 
-			frameborder="0" 
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-			allowfullscreen></iframe>
+
+		<div class="youtube"> <!-- slick1 -->
+			<div id = "mov">
+				<iframe src="https://www.youtube.com/embed/moFB-j5iY2E" title="YouTube video player" 
+				frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			</div>
+			<div id = "mov">
+				<iframe src="https://www.youtube.com/embed/AwrFPJk_BGU" title="YouTube video player" 
+				frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			</div>
+			<div id = "mov">
+				<iframe src="https://www.youtube.com/embed/gaGtSUdKlKk" title="YouTube video player" 
+				frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			</div>
+			<div id = "mov">
+				<iframe src="https://www.youtube.com/embed/CBVV-i_mZVc" title="YouTube video player" 
+				frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			</div>
 		</div>
-		<div id = "mov">
-			<iframe src="https://www.youtube.com/embed/AwrFPJk_BGU" title="YouTube video player" 
-			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-			allowfullscreen></iframe>
-		</div>
-		<div id = "mov">
-			<iframe src="https://www.youtube.com/embed/gaGtSUdKlKk" title="YouTube video player" 
-			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-			allowfullscreen></iframe>
-		</div>
-		<div id = "mov">
-			<iframe src="https://www.youtube.com/embed/CBVV-i_mZVc" title="YouTube video player" 
-			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-			allowfullscreen></iframe>
-		</div>
-	</div>
+		
 	</div>
 </body>
 </html>
